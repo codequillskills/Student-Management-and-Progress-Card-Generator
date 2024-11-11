@@ -34,7 +34,7 @@ const Login = () => {
         console.log("Login successful");
         localStorage.setItem("token", response.data.token);
         // Set expiration time (1 hour from now)
-        const expirationTime = new Date().getTime() + 10000;
+        const expirationTime = new Date().getTime() + 3600000;
         localStorage.setItem('expirationTime', expirationTime.toString());
         navigate("/");
       } else {
